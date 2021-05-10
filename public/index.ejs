@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="http://127.0.0.1:300/download" method="POST">
+    
+  <div class="input_div">
+  <input name='link'  placeholder="Search" class="input" type="text"><button type="submit">🍳</button>
+</div>
+</form>
+
+
+<div class="container">
+  <div class="img">   <img class='img2' src=<%- img %> ></div>
+  <div class="title_options">
+
+
+<ul>
+  <% data.forEach(function(result){ %>
+      <span><%= result.qualityLabel %></span></span><span></span><span> <a href=<%= result.url %>>here</a> <%= result.audioBitrate %></span>
+
+  <%  }); %>
+</ul>
+  </div>
+</div>
+
+<%- title %>
+<form method="post" action="/video" >
+  <button type="Submit" class="btn btn">play video online</button>
+
+
+
+</form>
+</body>
+</html>
